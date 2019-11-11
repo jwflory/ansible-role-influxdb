@@ -25,9 +25,25 @@ Role Variables
 
 ```yaml
 db_fqdn: example.com
+http:
+  enabled: "true"
+  bind_address: ":8086"
+  auth_enabled: "true"
+  https_enabled: "true"
+  https_certificate: "/usr/lib/influxdb/tls/{{ db_fqdn }}/fullchain.pem"
+  https_private_key: "/usr/lib/influxdb/tls/{{ db_fqdn }}/privkey.pem"
 ```
 
 * **`db_fqdn`**: Hostname/FQDN of InfluxDB server
+* **`http.enabled`**: Whether to enable HTTP gateway to InfluxDB server
+  (default: `true`)
+* **`http.bind_address`**: Specify bind address for host
+  (default `:8086`, runs on `0.0.0.0`)
+* **`http.auth_enabled`**: Is authentication required to connect to DB?
+  You should have a good reason for turning this off if so.
+  (default: `true`)
+* **`http.https_certificate`**: Path to HTTPS certificate
+* **`http.https_private_key`**: Path to HTTPS private key
 
 
 Dependencies
