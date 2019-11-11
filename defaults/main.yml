@@ -1,0 +1,4 @@
+---
+# Hostname/FQDN of InfluxDB server. If using TLS, set this to the domain or
+# subdomain associated with the HTTPS certificate.
+db_fqdn: example.com
