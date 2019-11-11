@@ -18,7 +18,7 @@ galaxy_info:
   - influxdb
   - influx
   - rhel
-  - time-series
+  - timeseries
   - tsdb
 
 dependencies: []
